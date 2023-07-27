@@ -1,0 +1,7 @@
+class Renderer:
+    def __init__(self, canvas):
+        self.canvas = canvas
+
+    def render(self, game_state):
+        # Render the game state on the canvas
+        pass

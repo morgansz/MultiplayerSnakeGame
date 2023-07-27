@@ -1,0 +1,44 @@
+from dataclasses import dataclass
+from typing import List, Tuple
+
+@dataclass
+class Snake:
+    body: List[Tuple[int, int]]
+    direction: Tuple[int, int]
+
+    def move(self):
+        # Update the snake's position based on the current direction
+        pass
+
+    def change_direction(self, direction: Tuple[int, int]):
+        # Change the snake's direction
+        pass
+
+    def check_collision(self):
+        # Check if the snake has collided with itself or the boundaries
+        pass
+
+    def grow(self):
+        # Grow the snake by adding a new segment to its body
+        pass
+
+@dataclass
+class Food:
+    position: Tuple[int, int]
+
+    def generate_position(self):
+        # Generate a random position for the food
+        pass
+
+@dataclass
+class Game:
+    snake: Snake
+    food: Food
+
+    def update(self):
+        # Update the game state
+        pass
+
+    def handle_input(self, direction: Tuple[int, int]):
+        # Handle user input to change the snake's direction
+        pass

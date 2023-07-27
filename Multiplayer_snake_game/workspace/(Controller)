@@ -1,0 +1,7 @@
+class KeyboardController:
+    def __init__(self, game):
+        self.game = game
+
+    def handle_keypress(self, event):
+        # Handle keyboard input and update the snake's direction
+        pass

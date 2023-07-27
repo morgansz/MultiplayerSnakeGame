@@ -1,0 +1,19 @@
+from snake import Snake, Food, Game
+from renderer import Renderer
+from keyboard_controller import KeyboardController
+from websocket_server import WebSocketServer
+
+# Create the game objects
+snake = Snake(body=[(10, 10), (10, 11), (10, 12)], direction=(0, -1))
+food = Food(position=(5, 5))
+game = Game(snake=snake, food=food)
+
+# Create the renderer and controller
+renderer = Renderer(canvas=None)  # Replace with actual canvas element
+controller = KeyboardController(game=game)
+
+# Create the WebSocket server
+websocket_server = WebSocketServer(game=game)
+
+# Start the WebSocket server
+websocket_server.start(host='localhost', port=8000)
